@@ -1,0 +1,38 @@
+{
+  "name": "mpesa-sdk",
+  "version": "1.0.0",
+  "description": "A TypeScript SDK for integrating Safaricom M-PESA APIs in Node.js and browser environments.",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && microbundle --tsconfig tsconfig.json --no-sourcemap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mpesa",
+    "safaricom",
+    "sdk",
+    "payments",
+    "mobile money"
+  ],
+  "author": "Your Name/Organization",
+  "license": "ISC",
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "microbundle": "^0.15.1",
+    "typescript": "^5.x.x"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^4.0.2",
+    "mpesa-sdk": "file:"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
